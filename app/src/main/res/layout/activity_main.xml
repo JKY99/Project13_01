@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    tools:context="com.example.project13_01.MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <ListView
+        android:id="@+id/listV"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gl1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnPlay"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:text="듣기"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvTitle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnPause"
+        app:layout_constraintTop_toTopOf="@+id/gl1" />
+
+    <Button
+        android:id="@+id/btnPause"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:text="일시정지"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvTitle"
+        app:layout_constraintLeft_toRightOf="@+id/btnPlay"
+        app:layout_constraintRight_toRightOf="@+id/btnStop"
+        app:layout_constraintTop_toTopOf="@+id/gl1" />
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:text="중지"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvTitle"
+        app:layout_constraintLeft_toRightOf="@+id/btnPause"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gl1" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="실행중인음악: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPlay" />
+
+    <ProgressBar
+        android:id="@+id/pbPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+</androidx.constraintlayout.widget.ConstraintLayout>
